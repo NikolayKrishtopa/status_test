@@ -117,4 +117,10 @@ const items = [
 ];
 const ts = new TreeStore(items);
 
+console.log(ts.getAll());
+console.log(ts.getItem(7));
+console.log(ts.getChildren(4));
+console.log(ts.getChildren(5));
+console.log(ts.getChildren(2));
+console.log(ts.getAllChildren(2));
 console.log(ts.getAllParents(7));
