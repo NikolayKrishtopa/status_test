@@ -91,7 +91,7 @@ class TreeStore {
 
   getAllParents = (id: IdType) => {
     let cur = this.searchTreeById(id);
-    let res = [cur];
+    let res: ItemsArrType = [];
     if (cur === undefined) return null;
     while (cur?.parent) {
       const next = this.searchTreeById(cur!.parent) as ItemType;
@@ -117,4 +117,4 @@ const items = [
 ];
 const ts = new TreeStore(items);
 
-console.log(ts.getAllChildren(2));
+console.log(ts.getAllParents(7));
